@@ -1,15 +1,24 @@
 "use client";
 
-import { Tabs } from "@mantine/core";
+import { Tabs, Transition } from "@mantine/core";
 import {
   IconPhoto,
   IconMessageCircle,
   IconSettings,
 } from "@tabler/icons-react";
+import { useState } from "react";
 
 export default function TabsComponent() {
+  const [activeTab, setActiveTab] = useState<string | null>("gallery");
+
   return (
-    <Tabs color="yellow" variant="pills" radius="lg" defaultValue="gallery">
+    <Tabs
+      color="yellow"
+      variant="pills"
+      radius="lg"
+      value={activeTab}
+      onChange={(val) => setActiveTab(val)}
+    >
       <Tabs.List>
         <Tabs.Tab value="gallery" leftSection={<IconPhoto size={16} />}>
           Gallery
@@ -25,9 +34,44 @@ export default function TabsComponent() {
         </Tabs.Tab>
       </Tabs.List>
 
-      <Tabs.Panel value="gallery">Gallery tab content</Tabs.Panel>
-      <Tabs.Panel value="messages">Messages tab content</Tabs.Panel>
-      <Tabs.Panel value="settings">Settings tab content</Tabs.Panel>
+      <Transition
+        mounted={activeTab === "gallery"}
+        transition="fade"
+        duration={300}
+        timingFunction="ease-out"
+      >
+        {(styles) => (
+          <Tabs.Panel value="gallery" style={styles}>
+            Gallery tab content
+          </Tabs.Panel>
+        )}
+      </Transition>
+
+      <Transition
+        mounted={activeTab === "messages"}
+        transition="fade"
+        duration={300}
+        timingFunction="ease-out"
+      >
+        {(styles) => (
+          <Tabs.Panel value="messages" style={styles}>
+            Messages tab content
+          </Tabs.Panel>
+        )}
+      </Transition>
+
+      <Transition
+        mounted={activeTab === "settings"}
+        transition="fade"
+        duration={300}
+        timingFunction="ease-out"
+      >
+        {(styles) => (
+          <Tabs.Panel value="settings" style={styles}>
+            Settings tab content
+          </Tabs.Panel>
+        )}
+      </Transition>
     </Tabs>
   );
 }
