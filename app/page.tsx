@@ -6,7 +6,6 @@ export default function HomePage() {
     <div>
       <TimelineComponent />
       <TabComponent />
-      <CardComponent />
     </div>
   );
 }
