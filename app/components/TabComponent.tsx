@@ -23,7 +23,12 @@ export default function TabsComponent() {
       value={activeTab}
       onChange={(val) => setActiveTab(val)}
     >
-      <Tabs.List style={{ marginLeft: "500px" }}>
+      <Tabs.List
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Tabs.Tab value="gallery" leftSection={<IconPhoto size={16} />}>
           About
         </Tabs.Tab>
@@ -46,7 +51,7 @@ export default function TabsComponent() {
         mounted={activeTab === "gallery"}
         transition="fade"
         duration={500} // Longer duration for smoother transition
-        timingFunction="ease-in-out" // Smoother easing function
+        timingFunction="ease-in-out" // Smoother easing function,
       >
         {(styles) => (
           <Tabs.Panel
@@ -69,7 +74,6 @@ export default function TabsComponent() {
             value="messages"
             style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
           >
-            {/* <CardComponent></CardComponent> */}
             <BadgeCard></BadgeCard>
           </Tabs.Panel>
         )}
