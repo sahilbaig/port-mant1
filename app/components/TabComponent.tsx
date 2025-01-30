@@ -23,7 +23,7 @@ export default function TabsComponent() {
       value={activeTab}
       onChange={(val) => setActiveTab(val)}
     >
-      <Tabs.List>
+      <Tabs.List style={{ marginLeft: "500px" }}>
         <Tabs.Tab value="gallery" leftSection={<IconPhoto size={16} />}>
           About
         </Tabs.Tab>
