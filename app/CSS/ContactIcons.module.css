@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 12px;
+  opacity: 0.8;
+}

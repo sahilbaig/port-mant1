@@ -1,0 +1,76 @@
+.wrapper {
+  min-height: 400px;
+  background-image: linear-gradient(
+    -60deg,
+    var(--mantine-color-blue-4) 0%,
+    var(--mantine-color-blue-7) 100%
+  );
+  border-radius: var(--mantine-radius-md);
+  padding: calc(var(--mantine-spacing-xl) * 2.5);
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    padding: calc(var(--mantine-spacing-xl) * 1.5);
+  }
+}
+
+.title {
+  font-family: "Greycliff CF", var(--mantine-font-family);
+  color: var(--mantine-color-white);
+  line-height: 1;
+}
+
+.description {
+  color: var(--mantine-color-blue-0);
+  max-width: 300px;
+
+  @media (max-width: var(--mantine-breakpoint-sm)) {
+    max-width: 100%;
+  }
+}
+
+.form {
+  background-color: var(--mantine-color-white);
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-md);
+  box-shadow: var(--mantine-shadow-lg);
+}
+
+.social {
+  color: var(--mantine-color-white);
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--mantine-color-blue-1);
+  }
+}
+
+.input {
+  background-color: var(--mantine-color-white);
+  border: 1px solid var(--mantine-color-gray-4);
+  color: var(--mantine-color-black);
+  padding: var(--mantine-spacing-sm);
+
+  &::placeholder {
+    color: var(--mantine-color-gray-5);
+  }
+}
+
+.inputLabel {
+  color: var(--mantine-color-black);
+}
+
+.control {
+  background-color: var(--mantine-color-blue-6);
+  color: var(--mantine-color-white);
+  border-radius: var(--mantine-radius-sm);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  transition: background-color 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px; /* Ensures proper height */
+
+  &:hover {
+    background-color: var(--mantine-color-blue-7);
+  }
+}

@@ -1,13 +1,16 @@
 "use client";
 
 import { Tabs, Transition } from "@mantine/core";
+import About from "./About";
+import TimelineComponent from "./Timeline";
+import ContactUs from "./Contact";
 import {
   IconPhoto,
   IconMessageCircle,
   IconSettings,
 } from "@tabler/icons-react";
 import { useState } from "react";
-import CardComponent from "./CardComponents";
+import { BadgeCard } from "./BadgeCards";
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState<string | null>("gallery");
@@ -22,16 +25,20 @@ export default function TabsComponent() {
     >
       <Tabs.List>
         <Tabs.Tab value="gallery" leftSection={<IconPhoto size={16} />}>
-          Gallery
+          About
         </Tabs.Tab>
         <Tabs.Tab
           value="messages"
           leftSection={<IconMessageCircle size={16} />}
         >
-          Messages
+          Projects
         </Tabs.Tab>
         <Tabs.Tab value="settings" leftSection={<IconSettings size={16} />}>
-          Settings
+          Experience
+        </Tabs.Tab>
+
+        <Tabs.Tab value="contact" leftSection={<IconSettings size={16} />}>
+          Contact
         </Tabs.Tab>
       </Tabs.List>
 
@@ -46,7 +53,7 @@ export default function TabsComponent() {
             value="gallery"
             style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
           >
-            Gallery tab content
+            <About></About>
           </Tabs.Panel>
         )}
       </Transition>
@@ -62,7 +69,8 @@ export default function TabsComponent() {
             value="messages"
             style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
           >
-            <CardComponent></CardComponent>
+            {/* <CardComponent></CardComponent> */}
+            <BadgeCard></BadgeCard>
           </Tabs.Panel>
         )}
       </Transition>
@@ -78,7 +86,22 @@ export default function TabsComponent() {
             value="settings"
             style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
           >
-            Settings tab content
+            <TimelineComponent />
+          </Tabs.Panel>
+        )}
+      </Transition>
+      <Transition
+        mounted={activeTab === "contact"}
+        transition="fade"
+        duration={500} // Longer duration for smoother transition
+        timingFunction="ease-in-out" // Smoother easing function
+      >
+        {(styles) => (
+          <Tabs.Panel
+            value="contact"
+            style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
+          >
+            <ContactUs />
           </Tabs.Panel>
         )}
       </Transition>

@@ -1,0 +1,28 @@
+.card {
+  background-color: light-dark(var(--mantine-color-dark-6));
+  color: white; /* Ensures text is white */
+}
+
+.title {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-weight: 700;
+  color: white; /* Ensures title text is white */
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: var(--mantine-radius-md);
+  height: 90px;
+  background-color: light-dark(var(--mantine-color-dark-7));
+  color: white; /* Ensures item text is white */
+  transition: box-shadow 150ms ease, transform 100ms ease;
+
+  @mixin hover {
+    box-shadow: var(--mantine-shadow-md);
+    transform: scale(1.05);
+  }
+}
