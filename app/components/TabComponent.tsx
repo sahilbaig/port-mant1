@@ -10,7 +10,7 @@ import {
   IconSettings,
 } from "@tabler/icons-react";
 import { useState } from "react";
-import { BadgeCard } from "./BadgeCards";
+import ProjectsGrid from "./BadgeCards";
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState<string | null>("gallery");
@@ -74,7 +74,7 @@ export default function TabsComponent() {
             value="messages"
             style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
           >
-            <BadgeCard></BadgeCard>
+            <ProjectsGrid></ProjectsGrid>
           </Tabs.Panel>
         )}
       </Transition>
