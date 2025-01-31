@@ -1,8 +1,5 @@
-import {
-  IconBrandInstagram,
-  IconBrandTwitter,
-  IconBrandYoutube,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+
 import {
   ActionIcon,
   Button,
@@ -16,9 +13,8 @@ import {
 import { ContactIconsList } from "./ContactIcons";
 import classes from "../CSS/ContactUs.module.css";
 const socialLinks = [
-  { icon: IconBrandTwitter, link: "https://twitter.com" },
-  { icon: IconBrandYoutube, link: "https://youtube.com" },
-  { icon: IconBrandInstagram, link: "https://instagram.com" },
+  { icon: IconBrandLinkedin, link: "https://www.linkedin.com/in/sahilbaig/" },
+  { icon: IconBrandGithub, link: "https://github.com/sahilbaig" },
 ];
 
 export default function ContactUs() {
@@ -44,9 +40,9 @@ export default function ContactUs() {
         style={{ alignItems: "start" }}
       >
         <div>
-          <Title className={classes.title}>Contact us</Title>
+          <Title className={classes.title}>Contact Me</Title>
           <Text className={classes.description} mt="sm" mb={30}>
-            Leave your email and we will get back to you within 24 hours.
+            Leave your email and I will get back to you within 24 hours.
           </Text>
 
           <ContactIconsList />
@@ -70,7 +66,7 @@ export default function ContactUs() {
           />
           <Textarea
             label="Your message"
-            placeholder="I want to order your goods"
+            placeholder=""
             minRows={4}
             mt="md"
             required
@@ -81,7 +77,8 @@ export default function ContactUs() {
             <Button
               className={classes.control}
               onClick={() => {
-                console.log("Me so clicked");
+                const a = process.env.API_KEY;
+                console.log(a);
               }}
             >
               Send message

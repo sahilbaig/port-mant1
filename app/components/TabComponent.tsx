@@ -27,88 +27,99 @@ export default function TabsComponent() {
         style={{
           display: "flex",
           justifyContent: "center",
+          padding: "10px",
         }}
       >
-        <Tabs.Tab value="gallery" leftSection={<IconPhoto size={16} />}>
+        <Tabs.Tab value="gallery" leftSection={<IconPhoto size={32} />}>
           About
         </Tabs.Tab>
         <Tabs.Tab
           value="messages"
-          leftSection={<IconMessageCircle size={16} />}
+          leftSection={<IconMessageCircle size={32} />}
         >
           Projects
         </Tabs.Tab>
-        <Tabs.Tab value="settings" leftSection={<IconSettings size={16} />}>
+        <Tabs.Tab value="settings" leftSection={<IconSettings size={32} />}>
           Experience
         </Tabs.Tab>
 
-        <Tabs.Tab value="contact" leftSection={<IconSettings size={16} />}>
+        <Tabs.Tab value="contact" leftSection={<IconSettings size={32} />}>
           Contact
         </Tabs.Tab>
       </Tabs.List>
 
-      <Transition
-        mounted={activeTab === "gallery"}
-        transition="fade"
-        duration={500} // Longer duration for smoother transition
-        timingFunction="ease-in-out" // Smoother easing function,
+      <div
+        style={{
+          backgroundColor: "red",
+          padding: "20px",
+          width: "70%",
+          margin: "0 auto",
+          height: "100%",
+        }}
       >
-        {(styles) => (
-          <Tabs.Panel
-            value="gallery"
-            style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
-          >
-            <About></About>
-          </Tabs.Panel>
-        )}
-      </Transition>
+        <Transition
+          mounted={activeTab === "gallery"}
+          transition="fade"
+          duration={500} // Longer duration for smoother transition
+          timingFunction="ease-in-out" // Smoother easing function,
+        >
+          {(styles) => (
+            <Tabs.Panel
+              value="gallery"
+              style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
+            >
+              <About></About>
+            </Tabs.Panel>
+          )}
+        </Transition>
 
-      <Transition
-        mounted={activeTab === "messages"}
-        transition="fade"
-        duration={500} // Longer duration for smoother transition
-        timingFunction="ease-in-out" // Smoother easing function
-      >
-        {(styles) => (
-          <Tabs.Panel
-            value="messages"
-            style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
-          >
-            <ProjectsGrid></ProjectsGrid>
-          </Tabs.Panel>
-        )}
-      </Transition>
+        <Transition
+          mounted={activeTab === "messages"}
+          transition="fade"
+          duration={500} // Longer duration for smoother transition
+          timingFunction="ease-in-out" // Smoother easing function
+        >
+          {(styles) => (
+            <Tabs.Panel
+              value="messages"
+              style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
+            >
+              <ProjectsGrid></ProjectsGrid>
+            </Tabs.Panel>
+          )}
+        </Transition>
 
-      <Transition
-        mounted={activeTab === "settings"}
-        transition="fade"
-        duration={500} // Longer duration for smoother transition
-        timingFunction="ease-in-out" // Smoother easing function
-      >
-        {(styles) => (
-          <Tabs.Panel
-            value="settings"
-            style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
-          >
-            <TimelineComponent />
-          </Tabs.Panel>
-        )}
-      </Transition>
-      <Transition
-        mounted={activeTab === "contact"}
-        transition="fade"
-        duration={500} // Longer duration for smoother transition
-        timingFunction="ease-in-out" // Smoother easing function
-      >
-        {(styles) => (
-          <Tabs.Panel
-            value="contact"
-            style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
-          >
-            <ContactUs />
-          </Tabs.Panel>
-        )}
-      </Transition>
+        <Transition
+          mounted={activeTab === "settings"}
+          transition="fade"
+          duration={500} // Longer duration for smoother transition
+          timingFunction="ease-in-out" // Smoother easing function
+        >
+          {(styles) => (
+            <Tabs.Panel
+              value="settings"
+              style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
+            >
+              <TimelineComponent />
+            </Tabs.Panel>
+          )}
+        </Transition>
+        <Transition
+          mounted={activeTab === "contact"}
+          transition="fade"
+          duration={500} // Longer duration for smoother transition
+          timingFunction="ease-in-out" // Smoother easing function
+        >
+          {(styles) => (
+            <Tabs.Panel
+              value="contact"
+              style={{ ...styles, transition: "opacity 0.5s ease-in-out" }}
+            >
+              <ContactUs />
+            </Tabs.Panel>
+          )}
+        </Transition>
+      </div>
     </Tabs>
   );
 }

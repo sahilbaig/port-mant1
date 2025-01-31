@@ -8,7 +8,7 @@ import {
 import { theme } from "../theme";
 
 export const metadata = {
-  title: "Mantine Next.js template",
+  title: "Mirza Sahil Baig",
   description: "I am using Mantine with Next.js!",
 };
 
@@ -17,13 +17,13 @@ export default function RootLayout({ children }: { children: any }) {
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/me.png" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
-      <body>
+      <body style={{ backgroundColor: " #242424" }}>
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
     </html>
