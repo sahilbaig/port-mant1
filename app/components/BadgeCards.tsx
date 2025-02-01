@@ -1,5 +1,5 @@
+import React from "react";
 import {
-  IconHeart,
   IconBrandGithub,
   IconBrandReact,
   IconBrandTypescript,
@@ -18,8 +18,14 @@ import {
 import classes from "../CSS/BadgeCard.module.css";
 import { theme } from "../../theme";
 
+// Define an interface for the icon data
+interface IconData {
+  icon: any;
+  label: string;
+}
+
 // List of available icons
-const icons = [
+const icons: IconData[] = [
   { icon: <IconBrandTypescript size={16} />, label: "Typescript" },
   { icon: <IconBrandReact size={16} />, label: "React" },
   { icon: <IconBrandNextjs size={16} />, label: "Next.js" },
@@ -27,8 +33,17 @@ const icons = [
   { icon: <IconBrandGithub size={16} />, label: "GitHub" },
 ];
 
+// Define an interface for a project
+export interface Project {
+  image: string;
+  title: string;
+  description: string;
+  badges: IconData[];
+  link: string;
+}
+
 // Mock project data array
-const mockProjects = [
+const mockProjects: Project[] = [
   {
     image: "https://source.unsplash.com/random/600x400?tech=1",
     title: "Portfolio Website",
@@ -71,8 +86,13 @@ const mockProjects = [
   },
 ];
 
+// Define the props for BadgeCard
+interface BadgeCardProps {
+  project: Project;
+}
+
 // BadgeCard component
-function BadgeCard({ project }) {
+export function BadgeCard({ project }: BadgeCardProps) {
   return (
     <Card radius="md" p="md" className={classes.card}>
       <Card.Section>
