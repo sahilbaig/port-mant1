@@ -8,7 +8,7 @@ import {
 } from "@mantine/core";
 import classes from "../CSS/ActionGrid.module.css";
 
-export function ActionsGrid({ data, title }) {
+export function ActionsGrid({ data, title }: { data: any[]; title: string }) {
   const theme = useMantineTheme();
 
   const items = data.map((item) => (
