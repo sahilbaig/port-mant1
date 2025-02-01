@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, Transition } from "@mantine/core";
+import { Tabs, Transition, useMantineTheme } from "@mantine/core";
 import About from "./About";
 import TimelineComponent from "./Timeline";
 import ContactUs from "./Contact";
@@ -11,9 +11,10 @@ import {
 } from "@tabler/icons-react";
 import { useState } from "react";
 import ProjectsGrid from "./BadgeCards";
-import { theme } from "../../theme";
 
 export default function TabsComponent() {
+  const theme = useMantineTheme();
+
   const [activeTab, setActiveTab] = useState<string | null>("gallery");
   return (
     <Tabs

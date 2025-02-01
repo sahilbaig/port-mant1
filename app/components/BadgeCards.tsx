@@ -14,9 +14,9 @@ import {
   Image,
   Text,
   SimpleGrid,
+  useMantineTheme,
 } from "@mantine/core";
 import classes from "../CSS/BadgeCard.module.css";
-import { theme } from "../../theme";
 
 // Define an interface for the icon data
 interface IconData {
@@ -93,6 +93,8 @@ interface BadgeCardProps {
 
 // BadgeCard component
 export function BadgeCard({ project }: BadgeCardProps) {
+  const theme = useMantineTheme();
+
   return (
     <Card radius="md" p="md" className={classes.card}>
       <Card.Section>
