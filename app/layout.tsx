@@ -9,7 +9,6 @@ import { theme } from "../theme";
 
 export const metadata = {
   title: "Mirza Sahil Baig",
-  description: "I am using Mantine with Next.js!",
 };
 
 export default function RootLayout({ children }: { children: any }) {

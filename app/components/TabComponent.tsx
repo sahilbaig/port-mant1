@@ -11,13 +11,13 @@ import {
 } from "@tabler/icons-react";
 import { useState } from "react";
 import ProjectsGrid from "./BadgeCards";
+import { theme } from "../../theme";
 
 export default function TabsComponent() {
   const [activeTab, setActiveTab] = useState<string | null>("gallery");
-
   return (
     <Tabs
-      color="yellow"
+      color={theme.colors.purple[0]}
       variant="pills"
       radius="lg"
       value={activeTab}
@@ -50,7 +50,6 @@ export default function TabsComponent() {
 
       <div
         style={{
-          backgroundColor: "red",
           padding: "20px",
           width: "70%",
           margin: "0 auto",

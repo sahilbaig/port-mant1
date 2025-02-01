@@ -16,6 +16,7 @@ import {
   SimpleGrid,
 } from "@mantine/core";
 import classes from "../CSS/BadgeCard.module.css";
+import { theme } from "../../theme";
 
 // List of available icons
 const icons = [
@@ -73,18 +74,18 @@ const mockProjects = [
 // BadgeCard component
 function BadgeCard({ project }) {
   return (
-    <Card withBorder radius="md" p="md" className={classes.card}>
+    <Card radius="md" p="md" className={classes.card}>
       <Card.Section>
         <Image src={project.image} alt={project.title} height={180} />
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
         <Group justify="apart">
-          <Text fz="lg" fw={500}>
+          <Text fz="lg" fw={500} style={{ color: "white" }}>
             {project.title}
           </Text>
         </Group>
-        <Text fz="sm" mt="xs">
+        <Text fz="sm" mt="xs" style={{ color: "white" }}>
           {project.description}
         </Text>
       </Card.Section>
@@ -100,6 +101,7 @@ function BadgeCard({ project }) {
               size="md"
               key={index}
               leftSection={badge.icon}
+              color="white"
             >
               {badge.label}
             </Badge>
@@ -115,6 +117,7 @@ function BadgeCard({ project }) {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
+          color={theme.colors.purple[1]}
         >
           More Details
         </Button>

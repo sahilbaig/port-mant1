@@ -41,8 +41,8 @@ const About = () => {
 
   return (
     <div>
-      <h1> About Me </h1>
-      <p>
+      <h1 style={{ color: "white" }}> About Me </h1>
+      <p style={{ color: "white" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quidem
         alias odit inventore, eos provident repudiandae nihil, atque quo ipsum
         eveniet dolores, ullam tenetur totam accusamus voluptatem magnam
