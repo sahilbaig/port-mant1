@@ -70,8 +70,8 @@ const About = () => {
           marginBottom: "15px",
         }}
       >
-        I'm Sahil Baig, a Software Developer with expertise in Next.js,
-        React.js, and Python. I'm passionate about building efficient and
+        I&apos;m Sahil Baig, a Software Developer with expertise in Next.js,
+        React.js, and Python. I&apos;m passionate about building efficient and
         user-friendly applications, optimizing performance, and automating
         workflows. Always eager to learn and tackle new challenges!
       </p>
@@ -84,8 +84,6 @@ const About = () => {
       >
         Download CV
       </Button>
-
-      {/* https://drive.google.com/file/d/1S3hkdDsmCZIS5QhYCw140sQ2__Q_8iXv/view?usp=sharing */}
 
       <div
         style={{
