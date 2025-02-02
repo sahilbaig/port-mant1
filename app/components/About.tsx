@@ -7,37 +7,38 @@ import {
   IconBrandNextjs,
   IconBrandHtml5,
   IconBrandCss3,
-  IconDatabase,
   IconBrandMongodb,
-  IconTerminal2,
-  IconServer,
-  IconServer2,
   IconBrandDjango,
   IconBrandGithub,
+  IconBrandJavascript,
+  IconBrandMysql,
+  IconBrandReact,
+  IconFlask,
+  IconBrandUbuntu,
 } from "@tabler/icons-react";
 
 const About = () => {
-  const backend = [
+  const languages = [
     { title: "Python", icon: IconBrandPython, color: "violet" },
-    { title: "TypeScript", icon: IconBrandTypescript, color: "violet" },
-    { title: "NodeJS", icon: IconBrandNodejs, color: "violet" },
-    { title: "Flask", icon: IconServer, color: "indigo" },
-    { title: "ExpressJS", icon: IconServer2, color: "blue" },
-    { title: "Django", icon: IconBrandDjango, color: "green" },
-    { title: "SQL", icon: IconDatabase, color: "teal" },
-    { title: "MongoDB", icon: IconBrandMongodb, color: "teal" },
-  ];
-
-  const frontend = [
-    { title: "Next.js", icon: IconBrandNextjs, color: "violet" },
+    { title: "TypeScript", icon: IconBrandTypescript, color: "indigo" },
+    { title: "JavaScript", icon: IconBrandJavascript, color: "blue" },
+    { title: "SQL", icon: IconBrandMysql, color: "violet" },
     { title: "HTML", icon: IconBrandHtml5, color: "indigo" },
-    { title: "CSS", icon: IconBrandCss3, color: "blue" },
   ];
 
-  const devOps = [
-    { title: "Linux", icon: IconBrandCss3, color: "violet" },
-    { title: "Bash Scripting", icon: IconTerminal2, color: "indigo" },
+  const frameworks = [
+    { title: "NextJS", icon: IconBrandNextjs, color: "violet" },
+    { title: "ReactJS", icon: IconBrandReact, color: "indigo" },
+    { title: "ExpressJS", icon: IconBrandJavascript, color: "blue" },
+    { title: "NodeJS", icon: IconBrandNodejs, color: "violet" },
+    { title: "Flask", icon: IconFlask, color: "indigo" },
+    { title: "Django", icon: IconBrandDjango, color: "blue" },
+  ];
+
+  const tools = [
+    { title: "Linux", icon: IconBrandUbuntu, color: "violet" },
     { title: "Github CI/CD", icon: IconBrandGithub, color: "indigo" },
+    { title: "MongoDB", icon: IconBrandMongodb, color: "blue" },
   ];
 
   return (
@@ -75,7 +76,16 @@ const About = () => {
         workflows. Always eager to learn and tackle new challenges!
       </p>
 
-      <Button style={{ marginBottom: "15px" }}>Download CV</Button>
+      <Button
+        style={{ marginBottom: "15px" }}
+        component="a"
+        href="https://drive.google.com/file/d/1S3hkdDsmCZIS5QhYCw140sQ2__Q_8iXv/view?usp=sharing "
+        download="cv"
+      >
+        Download CV
+      </Button>
+
+      {/* https://drive.google.com/file/d/1S3hkdDsmCZIS5QhYCw140sQ2__Q_8iXv/view?usp=sharing */}
 
       <div
         style={{
@@ -85,9 +95,9 @@ const About = () => {
           marginTop: "10px", // Reduced top margin to push up
         }}
       >
-        <ActionsGrid data={backend} title="Backend" />
-        <ActionsGrid data={frontend} title="Frontend" />
-        <ActionsGrid data={devOps} title="DevOps" />
+        <ActionsGrid data={languages} title="Languages" />
+        <ActionsGrid data={frameworks} title="Frameworks" />
+        <ActionsGrid data={tools} title="Tools" />
       </div>
 
       <style>

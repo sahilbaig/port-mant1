@@ -26,11 +26,11 @@ interface IconData {
 
 // List of available icons
 const icons: IconData[] = [
-  { icon: <IconBrandTypescript size={16} />, label: "Typescript" },
-  { icon: <IconBrandReact size={16} />, label: "React" },
-  { icon: <IconBrandNextjs size={16} />, label: "Next.js" },
-  { icon: <IconBrandNodejs size={16} />, label: "Node.js" },
-  { icon: <IconBrandGithub size={16} />, label: "GitHub" },
+  { icon: <IconBrandTypescript size={16} />, label: "Typescript" }, //0
+  { icon: <IconBrandReact size={16} />, label: "React" }, //1
+  { icon: <IconBrandNextjs size={16} />, label: "Next.js" }, //2
+  { icon: <IconBrandNodejs size={16} />, label: "Node.js" }, //3
+  { icon: <IconBrandGithub size={16} />, label: "GitHub" }, //4
 ];
 
 // Define an interface for a project
@@ -45,44 +45,19 @@ export interface Project {
 // Mock project data array
 const mockProjects: Project[] = [
   {
-    image: "https://source.unsplash.com/random/600x400?tech=1",
+    image: "/portfolio-img.png",
     title: "Portfolio Website",
     description:
       "A modern and fully responsive portfolio showcasing projects and skills.",
-    badges: [icons[1], icons[2], icons[4]],
-    link: "https://github.com/yourusername/portfolio-website",
+    badges: [icons[0], icons[2]],
+    link: "https://github.com/sahilbaig/port-mant1",
   },
   {
-    image: "https://source.unsplash.com/random/600x400?tech=2",
-    title: "E-Commerce Platform",
-    description:
-      "An intuitive and interactive platform for managing online stores and transactions.",
-    badges: [icons[0], icons[3], icons[4]],
-    link: "https://github.com/yourusername/e-commerce-platform",
-  },
-  {
-    image: "https://source.unsplash.com/random/600x400?tech=3",
-    title: "AI Chatbot",
-    description:
-      "An AI-powered chatbot designed to improve customer interactions.",
-    badges: [icons[1], icons[0], icons[4]],
-    link: "https://github.com/yourusername/ai-chatbot",
-  },
-  {
-    image: "https://source.unsplash.com/random/600x400?tech=4",
-    title: "Task Management App",
-    description:
-      "A task management tool with real-time collaboration features.",
-    badges: [icons[2], icons[3], icons[1]],
-    link: "https://github.com/yourusername/task-management-app",
-  },
-  {
-    image: "https://source.unsplash.com/random/600x400?tech=5",
-    title: "Crypto Tracker",
-    description:
-      "A cryptocurrency tracking app providing real-time price updates.",
-    badges: [icons[3], icons[0], icons[2]],
-    link: "https://github.com/yourusername/crypto-tracker",
+    image: "/email.jpg",
+    title: "Automated Email Reply System",
+    description: "An automated email reply system built with Node.js ",
+    badges: [icons[3], icons[4]],
+    link: "https://github.com/sahilbaig/ListedApp",
   },
 ];
 
