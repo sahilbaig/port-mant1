@@ -40,9 +40,6 @@ export default function TabsComponent() {
         >
           Projects
         </Tabs.Tab>
-        <Tabs.Tab value="settings" leftSection={<IconSettings size={32} />}>
-          Experience
-        </Tabs.Tab>
 
         <Tabs.Tab value="contact" leftSection={<IconSettings size={32} />}>
           Contact
