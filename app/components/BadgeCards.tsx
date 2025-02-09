@@ -62,11 +62,11 @@ const mockProjects: Project[] = [
     link: "https://github.com/sahilbaig/ListedApp",
   },
   {
-    image: "/email.jpg",
+    image: "/wordle.jpg",
     title: "Infinite Wordle",
-    description: "An infinite clone of Wordle made in Flutter",
+    description: "An infinite cross-platform clone of Wordle made in Flutter ",
     badges: [icons[5]],
-    link: "https://github.com/sahilbaig/ListedApp",
+    link: "https://github.com/sahilbaig/free-wordle-final",
   },
 ];
 
