@@ -5,6 +5,7 @@ import {
   IconBrandTypescript,
   IconBrandNextjs,
   IconBrandNodejs,
+  IconBrandFlutter,
 } from "@tabler/icons-react";
 import {
   Badge,
@@ -31,6 +32,7 @@ const icons: IconData[] = [
   { icon: <IconBrandNextjs size={16} />, label: "Next.js" }, //2
   { icon: <IconBrandNodejs size={16} />, label: "Node.js" }, //3
   { icon: <IconBrandGithub size={16} />, label: "GitHub" }, //4
+  { icon: <IconBrandFlutter size={16} />, label: "Flutter" }, //5
 ];
 
 // Define an interface for a project
@@ -57,6 +59,13 @@ const mockProjects: Project[] = [
     title: "Automated Email Reply System",
     description: "An automated email reply system built with Node.js ",
     badges: [icons[3], icons[4]],
+    link: "https://github.com/sahilbaig/ListedApp",
+  },
+  {
+    image: "/email.jpg",
+    title: "Infinite Wordle",
+    description: "An infinite clone of Wordle made in Flutter",
+    badges: [icons[5]],
     link: "https://github.com/sahilbaig/ListedApp",
   },
 ];
