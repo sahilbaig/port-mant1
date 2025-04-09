@@ -15,6 +15,8 @@ import {
   IconBrandReact,
   IconFlask,
   IconBrandUbuntu,
+  IconBrandAws,
+  IconBrandTerraform,
 } from "@tabler/icons-react";
 
 const About = () => {
@@ -39,6 +41,8 @@ const About = () => {
     { title: "Linux", icon: IconBrandUbuntu, color: "violet" },
     { title: "Github CI/CD", icon: IconBrandGithub, color: "indigo" },
     { title: "MongoDB", icon: IconBrandMongodb, color: "blue" },
+    { title: "AWS", icon: IconBrandAws, color: "violet" },
+    { title: "Terraform", icon: IconBrandTerraform, color: "indigo" },
   ];
 
   return (
@@ -79,7 +83,7 @@ const About = () => {
       <Button
         style={{ marginBottom: "15px" }}
         component="a"
-        href="https://drive.google.com/file/d/1S3hkdDsmCZIS5QhYCw140sQ2__Q_8iXv/view?usp=sharing "
+        href="https://drive.google.com/file/d/1KoF42zyNmEM_iaElerP_J3_eBTl0v1Kn/view?usp=sharing"
         download="cv"
       >
         Download CV

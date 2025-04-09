@@ -6,6 +6,8 @@ import {
   IconBrandNextjs,
   IconBrandNodejs,
   IconBrandFlutter,
+  IconBrandTerraform,
+  IconBrandAws,
 } from "@tabler/icons-react";
 import {
   Badge,
@@ -33,6 +35,8 @@ const icons: IconData[] = [
   { icon: <IconBrandNodejs size={16} />, label: "Node.js" }, //3
   { icon: <IconBrandGithub size={16} />, label: "GitHub" }, //4
   { icon: <IconBrandFlutter size={16} />, label: "Flutter" }, //5
+  { icon: <IconBrandTerraform size={16} />, label: "Terraform" }, //6
+  { icon: <IconBrandAws size={16} />, label: "AWS" }, //7
 ];
 
 // Define an interface for a project
@@ -46,6 +50,42 @@ export interface Project {
 
 // Mock project data array
 const mockProjects: Project[] = [
+  {
+    image: "/ec2.png",
+    title: "Automated EC2 Deployment",
+    description:
+      "Automated EC2 Deployment Pipeline with Terraform & GitHub Actions",
+    badges: [icons[7], icons[6], icons[4]],
+    link: "https://github.com/sahilbaig/ec2-testing-lab",
+  },
+
+  {
+    image: "/notion.png",
+    title: "Notion Inspired Google Docs Alternative",
+    description:
+      "Developed full-stack document editor with Next.js, Node.js, MongoDB",
+    badges: [icons[0], icons[1], icons[2]],
+    link: "https://github.com/sahilbaig/gword-frontend",
+  },
+
+  {
+    image: "/gsheet.png",
+    title: "Gsheets Clone",
+    description:
+      "Built spreadsheet application with React, Next.js, Typescript , Material UI, Redux",
+    badges: [icons[0], icons[1]],
+    link: "https://gsheets-nu.vercel.app/",
+  },
+
+  {
+    image: "/slack.png",
+    title: "Slack Approval Bot",
+    description:
+      "A Node.js Slack bot that manages approval requests with interactive Approve/Reject buttons.",
+    badges: [icons[3]],
+    link: "https://github.com/sahilbaig/slack-approval-bot",
+  },
+
   {
     image: "/portfolio-img.png",
     title: "Portfolio Website",
@@ -82,7 +122,15 @@ export function BadgeCard({ project }: BadgeCardProps) {
   return (
     <Card radius="md" p="md" className={classes.card}>
       <Card.Section>
-        <Image src={project.image} alt={project.title} height={180} />
+        <Image
+          src={project.image}
+          alt={project.title}
+          style={{
+            width: "100%",
+            height: "180px",
+            // or 'contain' depending on your needs
+          }}
+        />
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
